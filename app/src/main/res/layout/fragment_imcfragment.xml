@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.logonrm.calculators.fragments.IMCfragment">
+
+    <LinearLayout
+        android:id="@+id/llGeral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/llSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rgSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMasculino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:buttonTint="#FFF"
+                    android:text="Masculino"
+                    android:textColor="#FFF" />
+
+                <RadioButton
+                    android:id="@+id/rbFeminino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:buttonTint="#FFF"
+                    android:text="Feminino"
+                    android:textColor="#FFF" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSexo"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#000"
+                    android:background="#FFF">
+
+                    <android.support.design.widget.TextInputEditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="Sua Altura"
+                        android:textColor="#000"
+                        android:textColorHint="#000" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#000"
+                    android:background="#FFF">
+
+                    <android.support.design.widget.TextInputEditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="Seu Peso"
+                        android:textColor="#000"
+                        android:textColorHint="#000" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDados"
+            android:onClick="calcular"
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/tvIMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btCalcular"
+            android:gravity="center"
+            android:text="Seu IMC é:"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llGeral"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_below="@+id/tvIMC"
+            android:layout_gravity="center"
+            android:src="@drawable/ideal">
+
+        </ImageView>
+
+    </LinearLayout>
+
+</RelativeLayout>
