@@ -11,12 +11,22 @@
         android:background="@color/colorPrimary"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSexo"
+            android:text="Sexo"
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+
 
         <LinearLayout
             android:id="@+id/llSexo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"            >
+
+
 
             <RadioGroup
                 android:id="@+id/rgSexo"
@@ -45,6 +55,7 @@
             </RadioGroup>
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/llDados"
             android:layout_width="match_parent"
@@ -59,11 +70,14 @@
                 android:orientation="vertical">
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/etAltura"
+                    android:id="@+id/tlAltura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#FFF"
                     android:textColorHint="#000"
-                    android:background="#FFF">
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
                     <android.support.design.widget.TextInputEditText
 
@@ -72,7 +86,8 @@
                         android:gravity="center"
                         android:hint="Sua Altura"
                         android:textColor="#000"
-                        android:textColorHint="#000" />
+                        android:textColorHint="#000"
+                        android:id="@+id/etAltura"/>
 
 
                 </android.support.design.widget.TextInputLayout>
@@ -88,11 +103,14 @@
 
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/etPeso"
+                    android:id="@+id/tlPeso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#FFF"
                     android:textColorHint="#000"
-                    android:background="#FFF">
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin">
 
                     <android.support.design.widget.TextInputEditText
 
@@ -101,7 +119,8 @@
                         android:gravity="center"
                         android:hint="Seu Peso"
                         android:textColor="#000"
-                        android:textColorHint="#000" />
+                        android:textColorHint="#000"
+                        android:id="@+id/etPeso"/>
 
 
                 </android.support.design.widget.TextInputLayout>
@@ -115,8 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/llDados"
-            android:onClick="calcular"
-            android:text="Calcular" />
+            android:text="Calcular"/>
 
         <TextView
             android:id="@+id/tvIMC"
@@ -136,8 +154,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="128dp"
-            android:layout_height="128dp"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
             android:layout_below="@+id/tvIMC"
             android:layout_gravity="center"
             android:src="@drawable/ideal">
